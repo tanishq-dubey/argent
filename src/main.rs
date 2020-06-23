@@ -1,5 +1,7 @@
 use std::io::{self, Write};
 
+mod expansion;
+
 fn read_input() -> String {
     let mut input_string: String = String::new();
     std::io::stdin().read_line(&mut input_string).ok().expect("Could not read input");
@@ -11,10 +13,12 @@ fn lex(input: String) -> String {
 }
 
 fn expand(input: String) -> String {
+    expansion::brace_expand();
     return input
 }
 
 fn execute(input: String) -> i32{
+    println!("{}", input);
     return 0
 }
 
